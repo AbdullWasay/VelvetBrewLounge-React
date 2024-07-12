@@ -1,0 +1,33 @@
+.box {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0,0,0,.3);
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.box .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: top 0.3s;
+}
+
+.box .content {
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    transition: transform 0.3s;
+}
+
+.box:hover .image {
+    top: 0;
+}
+
+.box:hover .content {
+    transform: translateY(100%);
+}
